@@ -1100,3 +1100,100 @@ body{
     min-width:20px;
 
 }
+
+
+/*=========================================
+                NOSOTROS
+=========================================*/
+
+.about-section{
+
+    background:#ffffff;
+
+}
+
+.about-section img{
+
+    object-fit:cover;
+
+}
+
+.mission-section{
+
+    background:#f8f9fb;
+
+}
+
+.mission-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    text-align:center;
+
+    height:100%;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+.mission-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.mission-card i{
+
+    font-size:45px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.values-section{
+
+    background:white;
+
+}
+
+.value-card{
+
+    text-align:center;
+
+    padding:35px 25px;
+
+    border:1px solid #ececec;
+
+    border-radius:18px;
+
+    transition:.3s;
+
+    height:100%;
+
+}
+
+.value-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.value-card i{
+
+    font-size:40px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}

@@ -3,6 +3,7 @@
 namespace App\Providers;
 use App\Interfaces\LandingInterface;
 use App\Services\LandingService;
+use App\Services\LandingServices;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(
             LandingInterface::class,
-            LandingService::class
+            LandingServices::class
         );
     }
 

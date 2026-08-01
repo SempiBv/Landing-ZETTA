@@ -121,12 +121,6 @@
 
                 </div>
 
-                <div class="col-md-6 text-md-end">
-
-                    Desarrollado con Laravel · Bootstrap 5
-
-                </div>
-
             </div>
 
         </div>

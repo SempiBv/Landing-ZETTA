@@ -26,3 +26,6 @@ Route::get('/solicitar-servicio', [LandingController::class, 'cotizacion'])
 
 Route::get('/contacto', [LandingController::class, 'contacto'])
     ->name('contacto');
+
+Route::get('/nosotros', [LandingController::class, 'nosotros'])
+    ->name('nosotros');

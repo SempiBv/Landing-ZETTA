@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Interfaces\LandingInterface;
 use App\Services\LandingService;
+use App\Services\LandingServices;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
 {
-    private $landingService;
+    // private $landingService;
 
-    public function __construct(LandingInterface $landingService){
+    public function __construct(protected LandingServices $landingService){
         $this->landingService = $landingService;
     }
 
@@ -32,7 +33,7 @@ class LandingController extends Controller
 
     public function nosotros()
     {
-        return view('nosotros.index');
+        return view('layouts.nosotros.index');
     }
 
     public function faq()

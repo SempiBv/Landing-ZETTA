@@ -5,7 +5,7 @@ namespace App\Services;
 use App\Interfaces\LandingInterface;
 use Illuminate\Support\Facades\Http;
 
-class LandingService implements LandingInterface
+class LandingServices implements LandingInterface
 {
     private $url = 'http://127.0.0.1:8000/api/v1';
 
