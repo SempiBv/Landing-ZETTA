@@ -2,8 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Interfaces\LandingInterface;
+use App\Services\LandingService;
+use Illuminate\Http\Request;
+
 class LandingController extends Controller
 {
+    private $landingService;
+
+    public function __construct(LandingInterface $landingService){
+        $this->landingService = $landingService;
+    }
 
    public function inicio()
     {
@@ -47,6 +56,31 @@ class LandingController extends Controller
             'tiposServicio' => config('landing.tipos_servicio')
 
         ]);
+    }
+
+    public function enviarContacto(Request $request){
+        $respuesta = $this->landingService->enviarContacto(
+            $request->all()
+        );
+
+        if($respuesta->successful())
+        {
+            return back()->with('success','Mensaje enviado');
+        }
+
+        return back()->with('error','Error al enviar');
+    }
+
+    public function solicitarServicio(Request $request){
+        $respuesta = $this->landingService
+                        ->solicitarServicio($request->all());
+
+        if($respuesta->successful())
+        {
+            return back()->with('success','Solicitud enviada');
+        }
+
+        return back()->with('error','Error al enviar');
     }
 
 }

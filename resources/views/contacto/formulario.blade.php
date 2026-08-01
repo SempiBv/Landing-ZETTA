@@ -102,7 +102,7 @@
             <div class="col-lg-8 bg-white p-5">
 
                 <form method="POST"
-                      action="#">
+                      action="{{ route('contacto.enviar') }}">
 
                     @csrf
 
@@ -112,7 +112,7 @@
 
                             <input
                                 type="text"
-                                name="nombre"
+                                name="name"
                                 value="{{ old('nombre') }}"
                                 class="form-control @error('nombre') is-invalid @enderror"
                                 placeholder="Nombre">
@@ -131,7 +131,7 @@
 
                             <input
                                 type="email"
-                                name="correo"
+                                name="email"
                                 value="{{ old('correo') }}"
                                 class="form-control @error('correo') is-invalid @enderror"
                                 placeholder="Correo electrónico">
@@ -150,7 +150,7 @@
 
                             <input
                                 type="text"
-                                name="asunto"
+                                name="subject"
                                 value="{{ old('asunto') }}"
                                 class="form-control @error('asunto') is-invalid @enderror"
                                 placeholder="Asunto">
@@ -169,7 +169,7 @@
 
                             <textarea
                                 rows="7"
-                                name="mensaje"
+                                name="message"
                                 class="form-control @error('mensaje') is-invalid @enderror"
                                 placeholder="Escribe tu mensaje...">{{ old('mensaje') }}</textarea>
 

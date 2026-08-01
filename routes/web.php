@@ -3,6 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
 
+Route::post('/contacto', [LandingController::class,'enviarContacto'])
+    ->name('contacto.enviar');
+
+Route::post('/solicitar-servicio', [LandingController::class,'solicitarServicio'])
+    ->name('servicio.enviar');
+
 Route::get('/', [LandingController::class,'inicio'])->name('inicio');
 
 Route::get('/servicios', [LandingController::class,'servicios'])->name('servicios');

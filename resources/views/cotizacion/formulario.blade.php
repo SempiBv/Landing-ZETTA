@@ -55,7 +55,7 @@
             <div class="col-lg-8 bg-white p-5">
 
                 <form method="POST"
-                      action="#">
+                      action="{{ route('servicio.enviar') }}">
 
                     @csrf
 
@@ -65,7 +65,7 @@
 
                             <input
                                 type="text"
-                                name="nombre"
+                                name="full_name"
                                 value="{{ old('nombre') }}"
                                 class="form-control @error('nombre') is-invalid @enderror"
                                 placeholder="Nombre completo">
@@ -80,7 +80,7 @@
 
                             <input
                                 type="text"
-                                name="empresa"
+                                name="company"
                                 value="{{ old('empresa') }}"
                                 class="form-control"
                                 placeholder="Empresa (Opcional)">
@@ -91,7 +91,7 @@
 
                             <input
                                 type="email"
-                                name="correo"
+                                name="email"
                                 value="{{ old('correo') }}"
                                 class="form-control @error('correo') is-invalid @enderror"
                                 placeholder="Correo electrónico">
@@ -106,7 +106,7 @@
 
                             <input
                                 type="text"
-                                name="telefono"
+                                name="phone"
                                 value="{{ old('telefono') }}"
                                 class="form-control @error('telefono') is-invalid @enderror"
                                 placeholder="Teléfono">
@@ -151,7 +151,7 @@
 
                             <textarea
                                 rows="6"
-                                name="descripcion"
+                                name="detail"
                                 class="form-control @error('descripcion') is-invalid @enderror"
                                 placeholder="Cuéntanos más detalles...">{{ old('descripcion') }}</textarea>
 
