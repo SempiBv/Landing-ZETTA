@@ -42,7 +42,7 @@
             <div class="col-lg-6 text-center">
 
                 <img
-                    src="{{ asset('images/hero/hero.png') }}"
+                    src="{{ asset('images/hero/Hero.png') }}"
                     class="img-fluid hero-image"
                     alt="Hero">
 
