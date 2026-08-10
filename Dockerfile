@@ -32,7 +32,7 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 # Dependencias Node + build de assets
-RUN npm ci && npm run build
+RUN npm install && npm run build
 
 # Permisos para storage y cache
 RUN chown -R www-data:www-data storage bootstrap/cache \
