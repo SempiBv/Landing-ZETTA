@@ -6,13 +6,20 @@ PORT="${PORT:-10000}"
 
 cd /var/www
 
-# Generar .env a partir de .env.example si no existe
+# Generar .env si no existe
 if [ ! -f .env ]; then
-    cp .env.example .env
+    if [ -f .env.example ]; then
+        cp .env.example .env
+    else
+        # No hay .env.example: creamos uno mínimo.
+        # Las variables reales (DB_*, APP_KEY, etc.) deben venir configuradas
+        # en el panel de Render como Environment Variables.
+        touch .env
+    fi
 fi
 
-# Generar APP_KEY si no está seteada
-if ! grep -q "^APP_KEY=base64" .env; then
+# Generar APP_KEY si no está seteada (y si no viene ya como variable de entorno de Render)
+if [ -z "${APP_KEY}" ] && ! grep -q "^APP_KEY=base64" .env; then
     php artisan key:generate --force
 fi
 
