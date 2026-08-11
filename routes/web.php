@@ -21,10 +21,10 @@ Route::get('/contacto', [LandingController::class,'contacto'])->name('contacto')
 
 // Route::get('/cotizacion', [LandingController::class,'cotizacion'])->name('cotizacion');
 
-Route::get('/solicitar-servicio', [LandingController::class, 'cotizacion'])
+Route::get('/solicitar-servicio', [LandingController::class, 'solicitarServicio'])
     ->name('solicitar-servicio');
 
-Route::get('/contacto', [LandingController::class, 'contacto'])
+Route::get('/contacto', [LandingController::class, 'enviarContacto'])
     ->name('contacto');
 
 Route::get('/nosotros', [LandingController::class, 'nosotros'])
