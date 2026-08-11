@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Http;
 
 class LandingServices implements LandingInterface
 {
-    private $url = 'http://127.0.0.1:8000/api/v1';
+    private $url = 'http://deskservice-zetta.onrender.com//api/v1';
 
     public function enviarContacto(array $datos)
     {
