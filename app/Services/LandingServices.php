@@ -12,7 +12,7 @@ class LandingServices implements LandingInterface
     public function enviarContacto(array $datos)
     {
         return Http::post(
-            $this->url.'/contact-messages/',
+            $this->url.'/contact-messages',
             $datos
         );
     }
@@ -20,7 +20,7 @@ class LandingServices implements LandingInterface
     public function solicitarServicio(array $datos)
     {
         return Http::post(
-            $this->url.'/service-requests/',
+            $this->url.'/service-requests',
             $datos
         );
     }
